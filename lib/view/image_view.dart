@@ -63,12 +63,9 @@ class _ImageViewState extends State<ImageView> {
                     onTap: () {
                       if (kIsWeb) {
                         _launchURL(widget.imgPath);
-                        //js.context.callMethod('downloadUrl',[widget.imgPath]);
-                        //response = await dio.download(widget.imgPath, "./xx.html");
                       } else {
                         _save();
                       }
-                      //Navigator.pop(context);
                     },
                     child: Stack(
                       children: <Widget>[

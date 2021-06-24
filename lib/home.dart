@@ -46,7 +46,6 @@ class _HomeState extends State<Home> {
 
   @override
   void initState() {
-    //getWallpaper();
     getTrendingWallpaper();
     categories = getCategories();
     super.initState();
@@ -60,13 +59,13 @@ class _HomeState extends State<Home> {
     });
   }
 
-  _launchURL(String url) async {
-    if (await canLaunch(url)) {
-      await launch(url);
-    } else {
-      throw 'Could not launch $url';
-    }
-  }
+  // _launchURL(String url) async {
+  //   if (await canLaunch(url)) {
+  //     await launch(url);
+  //   } else {
+  //     throw 'Could not launch $url';
+  //   }
+  // }
 
   @override
   Widget build(BuildContext context) {
@@ -192,7 +191,7 @@ class CategoriesTile extends StatelessWidget {
                       child: Text(
                         categorie,
                         style: TextStyle(
-                            color: Colors.black54,
+                            color: Colors.white,
                             fontSize: 13,
                             fontWeight: FontWeight.w400,
                             fontFamily: 'Overpass'),
